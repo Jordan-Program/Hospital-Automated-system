@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04E5FCF3-09DB-4082-9550-5E7F5B1323DC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITSProject</RootNamespace>
+    <AssemblyName>ITSProject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.0.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlBackup.NET.2.0.9.4\lib\net40\MySqlBackup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdmissionBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmissionBilling.Designer.cs">
+      <DependentUpon>AdmissionBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmissionReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmissionReceipt.Designer.cs">
+      <DependentUpon>AdmissionReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admitting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admitting.Designer.cs">
+      <DependentUpon>Admitting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AncillaryBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AncillaryBilling.Designer.cs">
+      <DependentUpon>AncillaryBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AncillaryReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AncillaryReceipt.Designer.cs">
+      <DependentUpon>AncillaryReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodBankingRecordReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodBankingRecordReport.Designer.cs">
+      <DependentUpon>BloodBankingRecordReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicalChemRecordReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClinicalChemRecordReports.Designer.cs">
+      <DependentUpon>ClinicalChemRecordReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicalRecordReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClinicalRecordReports.Designer.cs">
+      <DependentUpon>ClinicalRecordReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="crsadmissionreceip.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsadmissionreceip.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsadmissiontransaction.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsadmissiontransaction.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsancillaryreceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsancillaryreceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsaudittrail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsaudittrail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsbloodbanking.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsbloodbanking.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsclinicalchem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsclinicalchem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsclinicalrecord.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsclinicalrecord.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsctscan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsctscan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsecg.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsecg.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsfecalysis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsfecalysis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crshematology.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crshematology.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsurinalysis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsurinalysis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crsxray.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crsxray.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="csrancillary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>csrancillary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ctscan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ctscan.Designer.cs">
+      <DependentUpon>Ctscan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtscanResultReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtscanResultReport.Designer.cs">
+      <DependentUpon>CtscanResultReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ecg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ecg.Designer.cs">
+      <DependentUpon>Ecg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EcgResultReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EcgResultReport.Designer.cs">
+      <DependentUpon>EcgResultReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmergencyHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmergencyHistory.Designer.cs">
+      <DependentUpon>EmergencyHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErmergencyRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErmergencyRoom.Designer.cs">
+      <DependentUpon>ErmergencyRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErViewAndTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErViewAndTransfer.Designer.cs">
+      <DependentUpon>ErViewAndTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FecalysisRecordReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FecalysisRecordReports.Designer.cs">
+      <DependentUpon>FecalysisRecordReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileMaintenance.Designer.cs">
+      <DependentUpon>FileMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HematologyRecordReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HematologyRecordReports.Designer.cs">
+      <DependentUpon>HematologyRecordReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laboratory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laboratory.Designer.cs">
+      <DependentUpon>Laboratory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MergeOldNewPatientHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MergeOldNewPatientHistory.Designer.cs">
+      <DependentUpon>MergeOldNewPatientHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="patientinfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register2nd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register2nd.Designer.cs">
+      <DependentUpon>Register2nd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterOld.Designer.cs">
+      <DependentUpon>RegisterOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrinalysisRecordReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrinalysisRecordReport.Designer.cs">
+      <DependentUpon>UrinalysisRecordReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPatient.Designer.cs">
+      <DependentUpon>ViewPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ward.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ward.Designer.cs">
+      <DependentUpon>Ward.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xray.Designer.cs">
+      <DependentUpon>Xray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XrayResultReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XrayResultReport.Designer.cs">
+      <DependentUpon>XrayResultReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdmissionBilling.resx">
+      <DependentUpon>AdmissionBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmissionReceipt.resx">
+      <DependentUpon>AdmissionReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admitting.resx">
+      <DependentUpon>Admitting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AncillaryBilling.resx">
+      <DependentUpon>AncillaryBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AncillaryReceipt.resx">
+      <DependentUpon>AncillaryReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodBankingRecordReport.resx">
+      <DependentUpon>BloodBankingRecordReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClinicalChemRecordReports.resx">
+      <DependentUpon>ClinicalChemRecordReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClinicalRecordReports.resx">
+      <DependentUpon>ClinicalRecordReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsadmissionreceip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsadmissionreceip.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsadmissiontransaction.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsadmissiontransaction.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsancillaryreceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsancillaryreceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsaudittrail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsaudittrail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsbloodbanking.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsbloodbanking.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsclinicalchem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsclinicalchem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsclinicalrecord.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsclinicalrecord.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsctscan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsctscan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsecg.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsecg.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsfecalysis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsfecalysis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crshematology.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crshematology.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsurinalysis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsurinalysis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crsxray.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crsxray.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="csrancillary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>csrancillary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctscan.resx">
+      <DependentUpon>Ctscan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtscanResultReport.resx">
+      <DependentUpon>CtscanResultReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ecg.resx">
+      <DependentUpon>Ecg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EcgResultReport.resx">
+      <DependentUpon>EcgResultReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmergencyHistory.resx">
+      <DependentUpon>EmergencyHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErmergencyRoom.resx">
+      <DependentUpon>ErmergencyRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErViewAndTransfer.resx">
+      <DependentUpon>ErViewAndTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FecalysisRecordReports.resx">
+      <DependentUpon>FecalysisRecordReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileMaintenance.resx">
+      <DependentUpon>FileMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HematologyRecordReports.resx">
+      <DependentUpon>HematologyRecordReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laboratory.resx">
+      <DependentUpon>Laboratory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MergeOldNewPatientHistory.resx">
+      <DependentUpon>MergeOldNewPatientHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register2nd.resx">
+      <DependentUpon>Register2nd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterOld.resx">
+      <DependentUpon>RegisterOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrinalysisRecordReport.resx">
+      <DependentUpon>UrinalysisRecordReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPatient.resx">
+      <DependentUpon>ViewPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ward.resx">
+      <DependentUpon>Ward.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xray.resx">
+      <DependentUpon>Xray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XrayResultReport.resx">
+      <DependentUpon>XrayResultReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmhlogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-button.png" />
+    <None Include="Resources\14194273_1510238488993745_1604274750_n.png" />
+    <Content Include="Resources\agenda.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\bed1.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\transfer.png" />
+    <None Include="Resources\medical-records1.png" />
+    <None Include="Resources\microscope1.png" />
+    <None Include="Resources\Register2.png" />
+    <None Include="Resources\Register1.png" />
+    <None Include="Resources\Register.png" />
+    <None Include="Resources\text-book-opened-from-top-view3.png" />
+    <None Include="Resources\test3.png" />
+    <None Include="Resources\surgeon3.png" />
+    <None Include="Resources\science3.png" />
+    <None Include="Resources\notes3.png" />
+    <None Include="Resources\notepad3.png" />
+    <None Include="Resources\medical3.png" />
+    <None Include="Resources\drill3.png" />
+    <None Include="Resources\doctor3.png" />
+    <None Include="Resources\chart2.png" />
+    <None Include="Resources\business3.png" />
+    <None Include="Resources\agenda3.png" />
+    <None Include="Resources\text-book-opened-from-top-view2.png" />
+    <None Include="Resources\test2.png" />
+    <None Include="Resources\syringe1.png" />
+    <None Include="Resources\surgeon2.png" />
+    <None Include="Resources\stethoscope1.png" />
+    <None Include="Resources\science2.png" />
+    <None Include="Resources\orange_bg21.jpg" />
+    <None Include="Resources\orange back31.png" />
+    <None Include="Resources\notes2.png" />
+    <None Include="Resources\notepad2.png" />
+    <None Include="Resources\medical2.png" />
+    <None Include="Resources\drill2.png" />
+    <None Include="Resources\doctor2.png" />
+    <None Include="Resources\cardiogram1.png" />
+    <None Include="Resources\business2.png" />
+    <None Include="Resources\blood-sample1.png" />
+    <None Include="Resources\band-aid1.png" />
+    <None Include="Resources\back_orange1.jpg" />
+    <None Include="Resources\agenda2.png" />
+    <None Include="Resources\text-book-opened-from-top-view1.png" />
+    <None Include="Resources\test1.png" />
+    <None Include="Resources\surgeon1.png" />
+    <None Include="Resources\science1.png" />
+    <None Include="Resources\notes1.png" />
+    <None Include="Resources\notepad1.png" />
+    <None Include="Resources\medical1.png" />
+    <None Include="Resources\drill1.png" />
+    <None Include="Resources\doctor1.png" />
+    <None Include="Resources\chart1.png" />
+    <None Include="Resources\business1.png" />
+    <None Include="Resources\agenda1.png" />
+    <None Include="Resources\ambulance-1.png" />
+    <Content Include="Resources\ambulance.png" />
+    <None Include="Resources\arrows.png" />
+    <Content Include="Resources\back_orange.jpg" />
+    <Content Include="Resources\band-aid.png" />
+    <Content Include="Resources\bed.png" />
+    <Content Include="Resources\blood-sample-1.png" />
+    <Content Include="Resources\blood-sample-2.png" />
+    <Content Include="Resources\blood-sample.png" />
+    <Content Include="Resources\business.png" />
+    <None Include="Resources\calendar.png" />
+    <Content Include="Resources\cardiogram.png" />
+    <Content Include="Resources\chart.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\clock1.png" />
+    <Content Include="Resources\dna.png" />
+    <Content Include="Resources\doctor.png" />
+    <Content Include="Resources\drill.png" />
+    <Content Include="Resources\femenine.png" />
+    <Content Include="Resources\first-aid-kit.png" />
+    <Content Include="Resources\flask.png" />
+    <Content Include="Resources\genders.png" />
+    <Content Include="Resources\helicopter.png" />
+    <Content Include="Resources\hospital.png" />
+    <None Include="Resources\log-out-symbol.png" />
+    <Content Include="Resources\male.png" />
+    <Content Include="Resources\medical-1.png" />
+    <Content Include="Resources\medical-records.png" />
+    <Content Include="Resources\medical.png" />
+    <Content Include="Resources\medicine.png" />
+    <Content Include="Resources\microscope.png" />
+    <Content Include="Resources\mortar.png" />
+    <Content Include="Resources\newborn.png" />
+    <Content Include="Resources\notepad.png" />
+    <None Include="Resources\notepad4.png" />
+    <Content Include="Resources\notes.png" />
+    <Content Include="Resources\nurse-1.png" />
+    <Content Include="Resources\nurse.png" />
+    <Content Include="Resources\orange back3.png" />
+    <Content Include="Resources\orange_bg2.jpg" />
+    <None Include="Resources\power.png" />
+    <None Include="Resources\page-background-default.jpg" />
+    <None Include="Resources\Picture1.png" />
+    <None Include="Resources\page-background-default1.jpg" />
+    <Content Include="Resources\science.png" />
+    <Content Include="Resources\stethoscope.png" />
+    <Content Include="Resources\surgeon.png" />
+    <Content Include="Resources\syringe.png" />
+    <Content Include="Resources\test.png" />
+    <Content Include="Resources\text-book-opened-from-top-view.png" />
+    <Content Include="Resources\thermometer.png" />
+    <Content Include="Resources\toilet-paper.png" />
+    <Content Include="Resources\tooth.png" />
+    <Content Include="Resources\wheelchair.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
